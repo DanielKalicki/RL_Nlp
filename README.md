@@ -26,18 +26,21 @@ The underlaying Transformer networks were based on publically available finetune
 * Memory \
 [Roberta-large](https://huggingface.co/roberta-large) with top linear layer. \
 Question and Documents tokens are concatenated and passed as input to Roberta-large model. Question tokens are randomly masked - this can be used to generate new memories without explicite question. \
-Top scored documents tokens are used to create the memory. \
-<img src="_images/README/MemoryNetworkOverview.png" width="500"/>
+Top scored documents tokens are used to create the memory. 
+
+<p align="center"><img src="_images/README/MemoryNetworkOverview.png" width="500"/></p>
 <!-- ![](_images/README/MemoryNetworkOverview.png) -->
 
 * Recall \
-Independent agent based on similar architecture like Memory network. \
-<img src="_images/README/RecallNetworkOverview.png" width="300"/>
+Independent agent based on similar architecture like Memory network. 
+
+<p align="center"><img src="_images/README/RecallNetworkOverview.png" width="300"/></p>
 <!-- ![](_images/README/RecallNetworkOverview.png) -->
 
 * Answer \
-Finetunned Meta text generative model [OPT-350m](https://huggingface.co/facebook/opt-350m).\
-<img src="_images/README/AnswerNetworkOverview.png" width="500"/>
+Finetunned Meta text generative model [OPT-350m](https://huggingface.co/facebook/opt-350m).
+
+<p align="center"><img src="_images/README/AnswerNetworkOverview.png" width="500"/></p>
 <!-- ![](_images/README/AnswerNetworkOverview.png) -->
 
 ### Multiple RL agents
@@ -46,8 +49,9 @@ Reinforcement learning algorithms are not stable on large action space, so we de
 ## **Current results**
 
 We run small scale training using single RTX3090 GPU:
-
-![](_images/README/acc_answer_model.png) ![](_images/README/answer_in_memory.png)
+<p align="center">
+  <img src="_images/README/acc_answer_model.png" width="400"/><img src="_images/README/answer_in_memory.png" width="400"/>
+</p>
 
 
 |      | <a style="color:purple">No Recall, 12t Memory, Squad</a> | <a style="color:#8B4513">No Recall, 24t Memory, Squad</a> | <a style="color:#87CEEB">16t Recall, 24t Memory, Squad</a> |
